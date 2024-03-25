@@ -981,6 +981,15 @@ textarea {
 /* My styles */
 
 :root {
+  --screen-3xl: 1640px;
+  --screen-2xl: 1440px;
+  --screen-xl: 1280px;
+  --screen-lg: 1024px;
+  --screen-md: 768px;
+  --screen-sm: 640px;
+  --text-sm: 12px;
+  --text-normal: 14px;
+  --text-base: 16px;
   --white: #ffffff;
   --gray-500: #939393;
   --gray-600: #525252;
@@ -997,7 +1006,7 @@ textarea {
 
 /* Container */
 .container {
-  max-width: 640px;
+  max-width: var(--screen-sm);
   margin: 0 auto;
   padding-left: 1.3rem;
   padding-right: 1.3rem;
@@ -1005,7 +1014,7 @@ textarea {
 
 @media (min-width: 1640px) {
   .container {
-    max-width: 1640px;
+    max-width: var(--screen-3xl);
     padding-left: 3rem;
     padding-right: 3rem;
   }
@@ -1013,7 +1022,7 @@ textarea {
 
 @media (min-width: 1440px) and (max-width: 1640px) {
   .container {
-    max-width: 1440px;
+    max-width: var(--screen-2xl);
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
@@ -1021,7 +1030,7 @@ textarea {
 
 @media (min-width: 1280px) and (max-width: 1440px) {
   .container {
-    max-width: 1280px;
+    max-width: var(--screen-xl);
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -1029,13 +1038,13 @@ textarea {
 
 @media (min-width: 1024px) and (max-width: 1280px) {
   .container {
-    max-width: 1024px;
+    max-width: var(--screen-lg);
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .container {
-    max-width: 768px;
+    max-width: var(--screen-md);
   }
 }
 
@@ -1054,7 +1063,8 @@ textarea {
 .archive .site-main {
   margin-top: 20px;
   min-height: calc(
-    100vh - var(--footer-height) - var(--footer-mt) - var(--header-height) - 20px
+    100vh - var(--footer-height) - var(--footer-mt) - var(--header-height) -
+      20px
   );
 }
 
@@ -1066,7 +1076,7 @@ ul.post-categories a {
   font-family: Avenir;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: var(--text-normal);
 }
 
 /* Text content */
@@ -1076,11 +1086,11 @@ ul.post-categories a {
 
 .entry-content p {
   color: var(--gray-600);
-  font-size: 16px;
+  font-size: var(--text-base);
 }
 @media (max-width: 768px) {
   .entry-content p {
-    font-size: 14px;
+    font-size: var(--text-normal);
   }
 }
 
@@ -1091,7 +1101,7 @@ ul.post-categories a {
   display: flex;
   align-items: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .hero {
     height: 390px;
   }
@@ -1130,7 +1140,7 @@ main .container.content {
   margin-top: -17rem;
   z-index: 999;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   main .container.content {
     margin-top: -12rem;
   }
@@ -1203,7 +1213,7 @@ header #menu-primary li.about-us a {
   margin-top: 0;
   margin-bottom: 60px;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .content h1 {
     font-size: 40px;
     margin-bottom: 40px;
@@ -1312,7 +1322,7 @@ header #menu-primary li.about-us a {
     padding: 30px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .single-post .post {
     padding: 20px;
   }
@@ -1356,7 +1366,7 @@ header #menu-primary li.about-us a {
     font-size: 25px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .single-post .post .entry-title {
     font-size: 22px;
   }
@@ -1387,7 +1397,7 @@ footer.site-footer hr {
 footer.site-footer .copyright {
   text-align: right;
   color: var(--white);
-  font-size: 14px;
+  font-size: var(--text-normal);
 }
 footer.site-footer .copyright .widget {
   margin-bottom: 0;
