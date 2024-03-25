@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Action_Labs
+ * @package action-labs
  */
 
 get_header();
