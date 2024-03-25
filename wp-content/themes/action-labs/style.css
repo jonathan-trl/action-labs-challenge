@@ -392,16 +392,6 @@ html {
 # Base
 --------------------------------------------------------------*/
 
-:root {
-  --white: #ffffff;
-  --gray-500: #939393;
-  --gray-600: #525252;
-  --gray-700: #666666;
-  --gray-900: #141414;
-  --cyan-300: #05cffc;
-  --blue-400: #01758d;
-}
-
 /* Typography
 --------------------------------------------- */
 
@@ -990,6 +980,19 @@ textarea {
 
 /* My styles */
 
+:root {
+  --white: #ffffff;
+  --gray-500: #939393;
+  --gray-600: #525252;
+  --gray-700: #666666;
+  --gray-900: #141414;
+  --cyan-300: #05cffc;
+  --blue-400: #01758d;
+  --header-height: 57px;
+  --footer-height: 124px;
+  --footer-mt: 65px;
+}
+
 /* Globals */
 
 /* Container */
@@ -1034,6 +1037,25 @@ textarea {
   .container {
     max-width: 768px;
   }
+}
+
+/* Page title */
+.page-title {
+  margin-top: 0;
+}
+
+/* Site main */
+.site-main {
+  min-height: calc(
+    100vh - var(--footer-height) - var(--footer-mt) - var(--header-height)
+  );
+}
+
+.archive .site-main {
+  margin-top: 20px;
+  min-height: calc(
+    100vh - var(--footer-height) - var(--footer-mt) - var(--header-height) - 20px
+  );
 }
 
 /* Button taxonomies */
@@ -1118,6 +1140,7 @@ main .container.content {
 
 /* Header */
 header#main-header {
+  height: var(--header-height);
   background-color: var(--cyan-300);
   padding: 10px 0;
 }
@@ -1350,6 +1373,7 @@ footer.site-footer {
   background-color: var(--cyan-300);
   margin-top: 65px;
   display: flex;
+  height: var(--footer-height);
   flex-direction: column;
   justify-content: center;
   padding-block: 20px;
