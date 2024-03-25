@@ -1,17 +1,21 @@
 <?php
+
 /**
  * Template part for displaying page content in page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Action_Labs
+ * @package action-labs
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+		<h2 class="entry-excerpt">
+			<?php the_excerpt(); ?>
+		</h2>
 	</header><!-- .entry-header -->
 
 	<?php action_labs_post_thumbnail(); ?>
