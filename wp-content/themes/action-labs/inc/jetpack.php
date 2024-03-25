@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Action_Labs
+ * @package action-labs
  */
 
 /**

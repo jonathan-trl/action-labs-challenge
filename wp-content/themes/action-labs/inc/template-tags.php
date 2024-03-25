@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Action_Labs
+ * @package action-labs
  */
 
 if ( ! function_exists( 'action_labs_posted_on' ) ) :

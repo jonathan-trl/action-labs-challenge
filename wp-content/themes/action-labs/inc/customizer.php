@@ -1,8 +1,8 @@
 <?php
 /**
- * Action Labs Theme Customizer
+ * action-labs Theme Customizer
  *
- * @package Action_Labs
+ * @package action-labs
  */
 
 /**
