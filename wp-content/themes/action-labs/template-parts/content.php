@@ -1,63 +1,47 @@
 <?php
+
 /**
  * Template part for displaying posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Action_Labs
+ * @package action-labs
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php the_category() ?>
+	
+	<?php action_labs_post_thumbnail(); ?>
+
 	<header class="entry-header">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				action_labs_posted_on();
-				action_labs_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+		the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
+		?>
 	</header><!-- .entry-header -->
-
-	<?php action_labs_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'action-labs' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+		the_excerpt();
+		?>
 
+		<?php
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'action-labs' ),
+				'before' => '<div class="page-links">' . esc_html__('Pages:', 'action-labs'),
 				'after'  => '</div>',
 			)
 		);
 		?>
 	</div><!-- .entry-content -->
 
+
 	<footer class="entry-footer">
-		<?php action_labs_entry_footer(); ?>
+		<a class="more-link" href=<?= get_permalink(); ?>>
+			<?= esc_html('Leia mais »'); ?>
+		</a>
 	</footer><!-- .entry-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
