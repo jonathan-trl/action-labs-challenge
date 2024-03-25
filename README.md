@@ -23,13 +23,13 @@ git clone https://github.com/jonathan-trl/action-labs-challenge.git
 - Caso você renomeou a pasta do projeto e não seja mais `action-labs-challenge`, no banco de dados, atualize as opções `siteurl` e `home` na tabela `wp_options` para corresponder ao seu ambiente local. Ou você pode definir essas opções no arquivo `wp-config.php`:
 
   ```php
-  define('WP_HOME', 'http://localhost/nome-do-projeto');
-  define('WP_SITEURL', 'http://localhost/nome-do-projeto');
+  define('WP_HOME', 'http://localhost/nome-da-pasta');
+  define('WP_SITEURL', 'http://localhost/nome-da-pasta');
   ```
 
 ### 5. Atualize os permalinks:
 
-- Acesse `http://localhost/nome-do-projeto/wp-admin`
+- Acesse `http://localhost/nome-da-pasta/wp-admin`
 - Use as seguintes credenciais para acessar como administrador:
   - Usuário: `jonathan-dev`
   - Senha: `!v)F)0d%qq1eoWs888`
@@ -37,3 +37,4 @@ git clone https://github.com/jonathan-trl/action-labs-challenge.git
 - Navegue até "Configurações" > "Links Permanentes" e clique em "Salvar alterações".
 
 ### 6. Acesse o site WordPress no navegador
+- `http://localhost/nome-da-pasta`
