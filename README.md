@@ -5,6 +5,7 @@ Este é um projeto WordPress que inclui arquivos e configurações necessários 
 ## 1. Instalação
 
 ### Clone o projeto:
+
 ```bash
 git clone https://github.com/jonathan-trl/action-labs-challenge.git
 ```
@@ -12,11 +13,27 @@ git clone https://github.com/jonathan-trl/action-labs-challenge.git
 ### 2. Copie a pasta do projeto para o diretório do seu servidor web (por exemplo, `htdocs` para XAMPP ou `www` para WAMP).
 
 ### 3. Configure o banco de dados:
+
 - Importe o arquivo SQL fornecido na pasta "database" para o seu sistema de gerenciamento de banco de dados (por exemplo, phpMyAdmin).
 
-
 ### 4. Configure o WordPress:
+
 - Renomeie o arquivo `wp-config-sample.php` para `wp-config.php`.
 - Edite o arquivo `wp-config.php` e atualize as configurações do banco de dados com as informações do seu sistema de gerenciamento de banco de dados.
+- Caso você renomeou a pasta do projeto e não seja mais `action-labs-challenge`, no banco de dados, atualize as opções `siteurl` e `home` na tabela `wp_options` para corresponder ao seu ambiente local. Ou você pode definir essas opções no arquivo `wp-config.php`:
 
-### 5. Acesse o site WordPress no navegador
+  ```php
+  define('WP_HOME', 'http://localhost/nome-do-projeto');
+  define('WP_SITEURL', 'http://localhost/nome-do-projeto');
+  ```
+
+### 5. Atualize os permalinks:
+
+- Acesse `http://localhost/nome-do-projeto/wp-admin`
+- Use as seguintes credenciais para acessar como administrador:
+  - Usuário: `jonathan-dev`
+  - Senha: `!v)F)0d%qq1eoWs888`
+- Acesse o painel de administração do WordPress.
+- Navegue até "Configurações" > "Links Permanentes" e clique em "Salvar alterações".
+
+### 6. Acesse o site WordPress no navegador
