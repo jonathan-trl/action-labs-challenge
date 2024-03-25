@@ -38,3 +38,7 @@ git clone https://github.com/jonathan-trl/action-labs-challenge.git
 
 ### 6. Acesse o site WordPress no navegador
 - `http://localhost/nome-da-pasta`
+
+## Informação Adicional
+
+Durante a criação do tema, utilizei o [Underscores](https://underscores.me/) para gerar um tema WordPress padrão.
